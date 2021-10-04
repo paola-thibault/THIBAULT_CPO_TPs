@@ -1,6 +1,5 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ * OBJECTIF : réaliser un convertisseur de températures utilisant des méthodes.
  */
 package tp1_convertisseur_thibault;
 
@@ -8,6 +7,9 @@ package tp1_convertisseur_thibault;
  *
  * @author paola
  */
+
+import java.util.Scanner;
+
 public class TP1_convertisseur_THIBAULT {
 
     /**
@@ -15,6 +17,13 @@ public class TP1_convertisseur_THIBAULT {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Scanner sc = new Scanner(System.in);
+        double valeur1 ;
+        System.out.println("saisir une valeur réelle : ");
+        valeur1 =sc.nextInt();
+        
+     
+
     }
     
 }
