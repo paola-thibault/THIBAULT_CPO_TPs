@@ -21,7 +21,7 @@ public class manipNombresInt_THIBAULT {
         System.out.println("Saisissez 2 entiers :");
         Scanner sc = new Scanner(System.in);
         System.out.println("Entier n°1 : ");
-         nb1=sc.nextInt();
+        nb1=sc.nextInt();
         System.out.println("Entier n°2 : ");
         int nb2=sc.nextInt();
         
