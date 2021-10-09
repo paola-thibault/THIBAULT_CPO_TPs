@@ -31,13 +31,13 @@ public class TP1_convertisseur_THIBAULT {
     
     //3
     public static double FarenheitVersCelcius ( double tempFarenheit) {
-        double tempCelcius = tempFarenheit + 32;
+        double tempCelcius = (tempFarenheit - 32)*1.8;
         return tempCelcius;
      }
     
     //4
     public static double CelciusVersFarenheit ( double tempCelcius) {
-        double tempFarenheit = tempCelcius - 32;
+        double tempFarenheit = tempCelcius*1.8 + 32;
         return tempFarenheit;
      }
     
@@ -49,7 +49,7 @@ public class TP1_convertisseur_THIBAULT {
 
     //6
     public static double FarenheitVersKelvin ( double tempFarenheit) {
-        double tempKelvin = (tempFarenheit + 459.67) / 1.8;
+        double tempKelvin = (tempFarenheit + 460) / 1.8;
         return tempKelvin;
      }
     
@@ -58,10 +58,19 @@ public class TP1_convertisseur_THIBAULT {
         // TODO code application logic here
         Scanner sc = new Scanner(System.in);
         double valeur ;
-        System.out.println("saisir une valeur réelle : ");
+        System.out.println("Bonjour, saisissez une valeur réelle : ");
         valeur =sc.nextDouble();
         System.out.println(valeur);
+        System.out.println("Saisissez la conversion que vous souhaiter effectuer :");
         
+        System.out.println("1) Celcius -> Kelvin ");
+        System.out.println("2) Kelvin -> Celcius ");
+        System.out.println("3) Farenheit -> Celcius ");
+        System.out.println("4) Celcius -> Farenheit ");
+        System.out.println("5) Kelvin -> Farenheit ");        
+        System.out.println("6) Farenheit -> Kelvin ");        
+        
+        int convertion =sc.nextInt();
         
         
         double valeurC =0;
@@ -69,36 +78,45 @@ public class TP1_convertisseur_THIBAULT {
         double valeurF =0;
         
         //1
-        System.out.println("Celcius -> Kelvin : ");
-        valeurK = CelciusVersKelvin(valeur);
-        System.out.println(valeurK);
-
+        if (convertion == 1){
+            valeurK = CelciusVersKelvin(valeur);
+            System.out.println(valeur + " degrés Celcius est égal à " +valeurK+" degrés Kelvin");            
+            }
+        
         //2
-        System.out.println("Kelvin -> Celcius : ");
-        valeurC = KelvinVersCelcius(valeur);
-        System.out.println(valeurC);
+        if (convertion == 2){
+            valeurC = KelvinVersCelcius(valeur);
+            System.out.println(valeur + " degrés Kelvin est égal à " +valeurC+" degrés Celcius");             
+            }
+        
               
         //3
-        System.out.println("Farenheit -> Celcius : ");
-        valeurC = FarenheitVersCelcius(valeur);
-        System.out.println(valeurF);
+        if (convertion == 3){
+            valeurC = FarenheitVersCelcius(valeur);
+            System.out.println(valeur + " degrés Farenheit est égal à " +valeurC+" degrés Celcius");
+            }
+        
 
         //4
-        System.out.println("Celcius -> Farenheit : ");
-        valeurF = CelciusVersFarenheit(valeur);
-        System.out.println(valeurF);
+        if (convertion == 4){
+            valeurF = CelciusVersFarenheit(valeur);
+            System.out.println(valeur + " degrés Celcius est égal à " +valeurF+" Farenheit");
+            }
+        
     
         //5
-        System.out.println("Kelvin -> Farenheit : ");
-        valeurF = KelvinVersFarenheit(valeur);
-        System.out.println(valeurF);
-       
+        if (convertion == 5){
+            valeurF = KelvinVersFarenheit(valeur);
+            System.out.println(valeur + " degrés Kelvin est égal à " +valeurF+" Farenheit");
+            }
+
         //6
-        System.out.println("Farenheit -> Kelvin : ");
-        valeurK = FarenheitVersKelvin(valeur);
-        System.out.println(valeurK);
-        
-        
+        if (convertion == 6){
+            valeurK = FarenheitVersKelvin(valeur);
+            System.out.println(valeur + " Farenheit est égal à " +valeurK+" degrés Kelvin ");
+            }
+
+          
     }
     
 }
