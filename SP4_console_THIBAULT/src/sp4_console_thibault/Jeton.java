@@ -11,7 +11,7 @@ package sp4_console_thibault;
 public class Jeton {
     String Couleur ;
     
-    public void Jeton (String color) {
+    public Jeton (String color) {
         Couleur = color ;
     }
     
