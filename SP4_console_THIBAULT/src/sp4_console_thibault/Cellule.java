@@ -14,13 +14,23 @@ public class Cellule {
     boolean desintegrateur;
     
     public Cellule() {
-        jetonCourant = false ; //false = pas de jeton
-  
+        jetonCourant = null ; //false = pas de jeton
+        trouNoir = false;
+        desintegrateur = false ;      
     }
     
     public boolean affecterJeton(Jeton entree) {
-       jetonCourant = entree;
-            
+        if (jetonCourant == null) {
+            jetonCourant = entree;
+            return true;
         }
+            else {
+                 return false;   
+                    }
     }
+    
+    public Jeton recupererJeton() {
+        return jetonCourant;
+    }
+        
 }
