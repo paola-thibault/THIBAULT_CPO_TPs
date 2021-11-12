@@ -1,0 +1,22 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package sp4_console_thibault;
+
+/**
+ *
+ * @author paola
+ */
+public class Jeton {
+    String Couleur ;
+    
+    public void Jeton (String color) {
+        Couleur = color ;
+    }
+    
+    public String lireCouleur (){
+        return Couleur ;
+    } 
+    
+}
