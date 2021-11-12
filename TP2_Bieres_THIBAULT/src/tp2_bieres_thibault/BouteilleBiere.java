@@ -10,19 +10,20 @@ package tp2_bieres_thibault;
  */
 public class BouteilleBiere {
     String nom = " "; 
-    float degreAlcool ;
+    double degreAlcool ;
     String brasserie ;
     boolean ouverte ;
 
+    public BouteilleBiere(String unNom, double unDegre, String uneBrasserie) {
+    nom = unNom;
+    degreAlcool = unDegre;
+    brasserie = uneBrasserie;
+    ouverte = false;
+    }
     
     public void lireEtiquette() {
         System.out.println("Bouteille de " + nom +" (" + degreAlcool + " degres) \nBrasserie : " + brasserie ) ;
     }
-    
-    BouteilleBiere uneBiere = new BouteilleBiere() ;
-    uneBiere.nom = "Cuvée des trolls";
-    uneBiere.degreAlcool = 7.0 ;
-}
     
     public boolean Décapsuler() { 
         if (ouverte == false) {
@@ -39,7 +40,7 @@ public class BouteilleBiere {
     @Override //écrase la methode toString pour creer une nouvelle methode
     public String toString() {
         String chaine_a_retourner;
-        chaine_a_retourner = nom + " (" + degreAlcool + " degrés)\nOuverte ? "; //nom est inclu dans biere_douy_gaubil.BouteilleBiere@65ab7765, toString cherche la valeur du nom dedans
+        chaine_a_retourner = nom + " (" + degreAlcool + " degrés)\nOuverte ? "; //nom est inclu dans tp2_bieres_thibault, toString cherche la valeur du nom dedans
         if (ouverte == true) chaine_a_retourner += "oui";
         else chaine_a_retourner += "non";
         return chaine_a_retourner;                  
